@@ -27,9 +27,9 @@ is being used) or the binary doubles as a CLI utility that accepts arguments.
 
 ```make build```
 
-This creates binaries appropriate for deployment to AWS.
+This creates binaries under `dist/` that are appropriate for deployment to AWS.
 
-#### Note on build artifact file names:
+*Note on build artifact file names:*
 
 When deploying a Go binary as a Lambda function one must rename the executable
 file to `bootstrap`. For more about handler naming conventions for Go Lambdas see:
