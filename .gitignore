@@ -1,0 +1,12 @@
+# macOS Debris
+.DS_Store
+
+# Go workspace file
+go.work
+go.work.sum
+
+# Test binary, built with `go test -c`
+*.test
+
+# env file
+.env
