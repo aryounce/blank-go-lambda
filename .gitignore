@@ -1,6 +1,9 @@
 # macOS Debris
 .DS_Store
 
+# Build artifacts
+dist/*
+
 # Go workspace file
 go.work
 go.work.sum
