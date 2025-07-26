@@ -5,10 +5,12 @@ import (
 	"encoding/json"
 
 	"github.com/aws/aws-lambda-go/lambda"
+	"github.com/aws/aws-lambda-go/lambdacontext"
 )
 
 func lambda_handler(ctx context.Context, event json.RawMessage) (string, error) {
-	return say_hello(), nil
+	lc, _ := lambdacontext.FromContext(ctx)
+	return say_hello(lc.InvokedFunctionArn), nil
 }
 
 func main() {
