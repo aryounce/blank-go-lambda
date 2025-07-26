@@ -1,4 +1,9 @@
 #
+# It is recommended that you copy (not clone) this project into a git repo of your
+# own creation.
+#
+
+#
 # This Makefile attempts to only utilize the intersection of features available
 # in `make` on both Linux and macOS. No attempt has been made to support Windows
 # Subsystem for Linux.
@@ -50,3 +55,10 @@ clean:
 aws-sdk: setup
 	go get github.com/aws/aws-sdk-go
 	go get github.com/aws/aws-lambda-go/lambda
+
+#
+# Shortcut to rename the Go module (in `go.mod`) for your copy of this repo.
+#
+mod-reinit:
+	go mod edit -module $(shell read -r -p 'Enter updated Go module name: ' new_name && echo $${new_name})
+	@go mod edit -fmt
