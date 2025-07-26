@@ -38,8 +38,9 @@ setup:
 #
 build: export GOOS = linux
 build: $(wildcard lambdas/*)
-	@mkdir -p dist
-	go build -o dist/$(patsubst lambdas/%,%,$<) $</*.go
+	@mkdir -p dist/$(patsubst lambdas/%,%,$<)
+	go build -o dist/$(patsubst lambdas/%,%,$<)/bootstrap $</*.go
+	cd dist/$(patsubst lambdas/%,%,$<) && zip ../$(patsubst lambdas/%,%,$<).zip bootstrap
 
 #
 # Builds binaries for the local machine to allow for dev testing.
