@@ -40,3 +40,8 @@ This creates binaries under `dist/` that are appropriate for deployment to AWS.
 
 Using `make aws-sdk` will update the versions of the AWS Go SDK and the AWS Lambda for Go
 SDK that the project's Go module references.
+
+## Post-Setup Recommendations
+
+- Delete `shared/demo` and `shared/README.md`.
+- Replace this `README.md` with documentation suitable to your own project.

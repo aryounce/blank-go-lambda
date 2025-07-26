@@ -35,8 +35,6 @@ setup:
 
 #
 # Builds (potentially cross-compiled) binaries for deployment to AWS Lambda.
-# Since AWS Lambda runs exclusively on Amazon Linux 2 the depolyment build must
-# target that operating system.
 #
 build: export GOOS = linux
 build: $(wildcard lambdas/*)
