@@ -29,12 +29,12 @@ is being used) or the binary doubles as a CLI utility that accepts arguments.
 
 This creates binaries under `dist/` that are appropriate for deployment to AWS.
 
-*Note on build artifact file names:*
-
-When deploying a Go binary as a Lambda function one must rename the executable
-file to `bootstrap`. For more about handler naming conventions for Go Lambdas see:
-[Building with Go > Handler naming conventions](https://docs.aws.amazon.com/lambda/latest/dg/golang-handler.html#golang-handler-naming)
-in the AWS Lambda documentation.
+> [!IMPORTANT]
+>
+> *Build artifact file names:* when deploying a Go binary as a Lambda function one must rename
+> the executable file to `bootstrap`. For more about handler naming conventions for Go Lambdas see:
+> [Building with Go > Handler naming conventions](https://docs.aws.amazon.com/lambda/latest/dg/golang-handler.html#golang-handler-naming)
+> in the AWS Lambda documentation.
 
 ## Updating the AWS SDKs
 
