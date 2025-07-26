@@ -10,7 +10,7 @@ import (
 
 func lambda_handler(ctx context.Context, event json.RawMessage) (string, error) {
 	lc, _ := lambdacontext.FromContext(ctx)
-	return say_hello(lc.InvokedFunctionArn), nil
+	return say_hello(lc, lc.InvokedFunctionArn), nil
 }
 
 func main() {
