@@ -6,13 +6,13 @@ This is a starter template for AWS Lambda functions written in Golang.
 
 Two steps are recommended to get started:
 
-1. Export (do not clone) this project, or use it as a repo template, into a new
+1. Export (do not clone) this project, or use it as a repo template, for a new
    git repository.
 2. Run `make mod-reinit` to rename the Go module for your project (in `go.mod`).
 
 ## Building
 
-Targets for both local builds and Amazon Linux are supplied.
+Targets for both local builds and Amazon Linux builds are supplied.
 
 ### Local Builds
 
@@ -40,7 +40,3 @@ This creates binaries under `dist/` that are appropriate for deployment to AWS.
 
 Using `make aws-sdk` will update the versions of the AWS Go SDK and the AWS Lambda for Go
 SDK that the project's Go module references.
-
-# TODO
-
-- Demonstrated references to the shared module.

@@ -15,7 +15,8 @@
 
 #
 # Disable linking with libc on Linux. This covers the case of cross-compilation
-# targeting Linux and may interfere with the use of certain dependencies.
+# targeting Linux and may interfere with the use of certain dependencies. See,
+# also: https://github.com/aws/aws-lambda-go?tab=readme-ov-file#using-cgo
 #
 export CGO_ENABLED := 0
 
