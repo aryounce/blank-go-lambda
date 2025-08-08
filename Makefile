@@ -29,6 +29,8 @@ export GOARCH ?= $(shell uname -m)
 setup:
 	@go mod tidy
 
+build-all: build build-local
+
 #
 # Builds (potentially cross-compiled) binaries for deployment to AWS Lambda.
 #
