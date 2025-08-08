@@ -26,12 +26,10 @@ export CGO_ENABLED := 0
 #
 export GOARCH ?= $(shell uname -m)
 
-# AWS Lambda runs exclusively on Amazon Linux 2 so this needs to be uncommented
-# when cross-compiling for deployment to Lambda.
-#export GOOS := "linux"
-
 setup:
 	@go mod tidy
+
+build-all: build build-local
 
 #
 # Builds (potentially cross-compiled) binaries for deployment to AWS Lambda.
